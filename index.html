@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Sequencer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <script src="main.js" type="module" defer></script>
+  </head>
+  <body>
+    <div class="grid" id="grid">
+      <!-- Create 64 cells (4 rows x 16 columns) -->
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="0" data-track="kick"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="1" data-track="snare"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="2" data-track="clap"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+      <div class="cell" data-row="3" data-track="hihat"></div>
+    </div>
+    <button id="toggleSequencer">Play</button>
+  </body>
+</html>
