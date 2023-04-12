@@ -1,5 +1,5 @@
 # DrumSequencer
-A simple 4 voice 16 step drum machine and sequencer 
+A simple 4 voice 32 step drum machine and sequencer 
 
 Click on the grid to set notes. <br>
 Row 1 = Bass Drum<br>

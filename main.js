@@ -15,7 +15,7 @@ import { createVoice as createHiHat } from "./hihat.js";
 let audioContext;
 let isPlaying = false;
 let currentStep = 0;
-const bpm = 100;
+const bpm = 200;
 let sequenceInterval;
 
 let kick, snare, clap, hihat;
@@ -77,13 +77,13 @@ function playSequence() {
   var cells = document.querySelectorAll(".cell");
 
   for (var i = 0; i < 4; i++) {
-    var cell = cells[currentStep + i * 16];
+    var cell = cells[currentStep + i * 32];
     if (cell.classList.contains("on")) {
       playSynth(cell.dataset.track);
     }
   }
 
-  currentStep = (currentStep + 1) % 16;
+  currentStep = (currentStep + 1) % 32;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -94,11 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleCell(this);
     });
         // Add the row class to the cell
-    if (i < 16) {
+    if (i < 32) {
       cells[i].classList.add("row1");
-    } else if (i < 32) {
+    } else if (i < 64) {
       cells[i].classList.add("row2");
-    } else if (i < 48) {
+    } else if (i < 96) {
       cells[i].classList.add("row3");
     } else {
       cells[i].classList.add("row4");

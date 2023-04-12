@@ -13,17 +13,6 @@ function createKick(audioContext) {
     return curve;
   }
 
-  // Set up the distortion node with a subtle curve
-  var distortion = context.createWaveShaper();
-  distortion.curve = makeDistortionCurve(20);
-  distortion.oversample = "4x";
-
-  // Set up the filter node as a low pass Butterworth filter
-  var filter = context.createBiquadFilter();
-  filter.type = "lowpass";
-  filter.frequency.value = 400;
-  filter.Q.value = 8;
-
   return {
     trigger: function () {
       var osc1 = context.createOscillator();
@@ -38,6 +27,17 @@ function createKick(audioContext) {
       osc2.frequency.value = 43.7;
       osc2.detune.value = 10;
 
+      // Set up the distortion node with a subtle curve
+      var distortion = context.createWaveShaper();
+      distortion.curve = makeDistortionCurve(1);
+      distortion.oversample = "4x";
+
+      // Set up the filter node as a low pass Butterworth filter
+      var filter = context.createBiquadFilter();
+      filter.type = "lowpass";
+      filter.frequency.value = 400;
+      filter.Q.value = 8;
+
       // Set up the gain node with ADSR controls
       var attackTime = 0.0001;
       var decayTime = 1.0;
@@ -45,13 +45,13 @@ function createKick(audioContext) {
       var releaseTime = 1.0;
       var now = context.currentTime;
       gain.gain.setValueAtTime(0, now);
-      gain.gain.linearRampToValueAtTime(0.6, now + attackTime);
+      gain.gain.linearRampToValueAtTime(0.8, now + attackTime);
       gain.gain.exponentialRampToValueAtTime(0.000001, now + attackTime + decayTime + releaseTime);
 
       // Connect the nodes together
       osc1.connect(gain);
       osc2.connect(gain);
-      gain.connect(filter);
+      gain.connect(distortion);
       distortion.connect(filter);
       filter.connect(context.destination);
 

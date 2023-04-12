@@ -28,7 +28,7 @@ function createSnare(audioContext) {
   var highpassFilter = context.createBiquadFilter();
   highpassFilter.type = 'highpass';
   highpassFilter.frequency.value = 349.2;
-  highpassFilter.Q.value = 4;
+  highpassFilter.Q.value = 0;
 
   return {
     trigger: function () {
@@ -45,7 +45,7 @@ function createSnare(audioContext) {
       osc2.frequency.value = 349.2;
 
       // Set up the gain node with ADSR controls
-      var attackTime = 0.001; 
+      var attackTime = 0.00; 
       var decayTime = 0.15;
       var sustainLevel = 0.01;
       var releaseTime = 0.01;
